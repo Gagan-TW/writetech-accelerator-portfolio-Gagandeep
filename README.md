@@ -1,6 +1,6 @@
 # My WriteTech Accelerator Portfolio
 
-Welcome! This repository contains all my project work and deliverables from the **WriteTech Accelerator Program**.
+Welcome! This repository contains all my project work and deliverables from the **[WriteTech](https://writetechhub.org/) Accelerator Program**.
 
 The accelerator program concludes in November. Creating this repository is the first step I am taking to house all the projects I will work on during the program. I will add each project here as I complete it.
 
@@ -23,7 +23,8 @@ I am a technical writer with a background in engineering and a passion for creat
 
 ## 🔗 Additional Links
 
-- [LinkedIn](www.linkedin.com/in/gagandeep-technicalwriter)  
+- [LinkedIn](www.linkedin.com/in/gagandeep-technicalwriter) 
+
   
 
 Thank you for checking out my work.
