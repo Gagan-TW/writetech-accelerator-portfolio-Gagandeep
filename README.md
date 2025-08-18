@@ -1,41 +1,29 @@
-# Website
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+# My WriteTech Accelerator Portfolio
 
-## Installation
+Welcome! This repository contains all my project work and deliverables from the **WriteTech Accelerator Program**.
 
-```bash
-yarn
-```
+The accelerator program concludes in November. Creating this repository is the first step I am taking to house all the projects I will work on during the program. I will add each project here as I complete it.
 
-## Local Development
+Throughout the program, I am working on technical writing projects across API documentation, AI, DevOps, automation, and Web3, using modern documentation workflows and tools.
 
-```bash
-yarn start
-```
+## 👩🏽‍💻 About Me
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+I am a technical writer with a background in engineering and a passion for creating clear, structured, and user-focused documentation. My interests include API documentation, DevOps, automation workflows, and exploring how AI can improve the documentation process. Through the WriteTech Accelerator Program, I aim to expand my skills and build a strong portfolio that reflects my capabilities in modern documentation practices.
 
-## Build
+## 📁 Project Modules
 
-```bash
-yarn build
-```
+| Module                                           | Folder                                                             | Final Deliverables                                                                                       | Live Link     |
+| ------------------------------------------------ | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- | ------------- |
+| Documentation Tooling and Static Site Generators | [`documentation-tooling/`](./docs/documentation-tooling)           | How-to guide for setting up a docs-as-code workflow using Docusaurus                                     | *\[Add link]* |
+| API Documentation and OpenAPI                    | [`api-documentation/`](./docs/api-documentation)                   | Improved documentation for selected endpoints from a real or public API                                  | *\[Add link]* |
+| Automation and Static Site Deployment            | [`docs-automation/`](./docs/docs-automation)                       | Automated checks for style, links, and builds using tools like Vale, Spectral, and GitHub Actions        | *\[Add link]* |
+| AI for Documentation                             | [`ai-documentation/`](./docs/ai-documentation)                     | Comparison of AI tools or prompt-based documentation using custom examples                               | *\[Add link]* |
+| DevOps and Cloud Documentation                   | [`devops-cloud-documentation/`](./docs/devops-cloud-documentation) | Step-by-step guide for a DevOps or cloud tool or process such as CI/CD or deployment                     | *\[Add link]* |
+| Technical Writing in Web3                        | [`web3-documentation/`](./docs/web3-documentation)                 | One of: user guide for a Web3 tool, white paper draft, or improved API documentation for a Web3 platform | *\[Add link]* |
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+## 🔗 Additional Links
 
-## Deployment
+* [LinkedIn](www.linkedin.com/in/gagandeep-technicalwriter)
 
-Using SSH:
 
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
