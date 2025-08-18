@@ -8,8 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        This documentation site is built with Docusaurus, making it quick to set up and simple to maintain. You can focus on writing clear guides and API references without worrying about complex tooling.
       </>
     ),
   },
@@ -18,18 +17,16 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+       Our site highlights the JSONPlaceholder API through clean, organized examples. Instead of spending time configuring a documentation system, you can dive straight into exploring endpoints, learning usage patterns, and testing requests.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Powered by Open Standards',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        The docs showcase real API calls, responses, and usage with tools like curl and JavaScript fetch. Everything is designed to help developers and technical writers quickly understand how to integrate JSONPlaceholder into their testing or learning workflow.
       </>
     ),
   },
