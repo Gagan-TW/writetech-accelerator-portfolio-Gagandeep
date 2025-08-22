@@ -49,7 +49,28 @@ const config = {
       }),
     ],
   ],
+plugins: [
+  [
+    'docusaurus-plugin-openapi-docs',
+    {
+      id: 'api',               // internal ID – leave as-is
+      docsPluginId: 'classic', // connects to the classic preset
+      config: {
+        chimoney: {
+          /* ← points to your renamed spec */
+          specPath: 'docs/api-documentation/chimoney-spec.yaml',
 
+          /* ← where the plugin will write the generated .md files */
+          outputDir: 'docs/api-documentation/reference',
+
+          sidebarOptions: {
+            groupPathsBy: 'tag', // Wallet, Payments, Transactions
+          },
+        },
+      },
+    },
+  ],
+],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -70,6 +91,13 @@ const config = {
             position: 'left',
             label: 'Project',
           },
+            {
+        type:         'docSidebar',
+        sidebarId:    'apiSidebar',   // ← matches sidebar we just created
+        PluginId:  'api',          // ← MUST match the id in your openapi-docs plugin
+        position:     'left',
+        label:        'API',
+      },
           {
             href: 'https://github.com/Gagan-TW/writetech-accelerator-portfolio-Gagandeep.git',
             label: 'GitHub',
@@ -111,3 +139,4 @@ const config = {
 };
 
 export default config;
+
