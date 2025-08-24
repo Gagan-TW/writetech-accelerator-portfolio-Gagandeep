@@ -2,26 +2,54 @@ openapi: 3.0.0
 info:
   title: Chimoney Demo API
   version: 1.0.0
-  description: >
-    Demo OpenAPI spec for portfolio purposes. Includes 3 endpoints:
-    - Check Wallet Balance
-    - Send Money
-    - Get Transaction Status
+  description: |
+    Portfolio demo – three basic endpoints for Chimoney:
+      • Check Wallet Balance  
+      • Send Money  
+      • Get Transaction Status
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
 
 servers:
   - url: https://api.chimoney.io/v1
 
 tags:
   - name: Wallet
+    description: Operations that read or modify a user wallet
   - name: Payments
+    description: Endpoints for sending or receiving funds
   - name: Transactions
+    description: Retrieve the status of previously created transactions
 
+#
+# ----------------------------------------------------------------------
+# SECURITY (global – applies to every operation)
+# ----------------------------------------------------------------------
+#
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-KEY
+
+security:
+  - ApiKeyAuth: []
+
+#
+# ----------------------------------------------------------------------
+# PATHS
+# ----------------------------------------------------------------------
+#
 paths:
+
   /wallet/balance:
     get:
       tags: [Wallet]
       summary: Check wallet balance
-      description: Returns the current balance of the wallet.
+      description: Returns the current balance of the authenticated wallet.
+      operationId: getWalletBalance
       responses:
         '200':
           description: Wallet balance retrieved
@@ -36,12 +64,17 @@ paths:
                   currency:
                     type: string
                     example: USD
+        '401':
+          description: Invalid or missing API key
+        '500':
+          description: Unexpected server error
 
   /payments/send:
     post:
       tags: [Payments]
       summary: Send money
       description: Sends a payment to a recipient.
+      operationId: sendPayment
       requestBody:
         required: true
         content:
@@ -92,19 +125,26 @@ paths:
                   currency:
                     type: string
                     example: USD
+        '400':
+          description: Validation error (missing or invalid fields)
+        '401':
+          description: Invalid or missing API key
+        '500':
+          description: Unexpected server error
 
   /transactions/{id}:
     get:
       tags: [Transactions]
       summary: Get transaction status
       description: Retrieves the status and details of a transaction by ID.
+      operationId: getTransactionStatus
       parameters:
         - in: path
           name: id
           required: true
           schema:
             type: string
-          description: The transaction ID returned from send money
+          description: Transaction ID returned from **Send money**
           example: tx_9a32bd1f
       responses:
         '200':
@@ -130,5 +170,9 @@ paths:
                     type: string
                     format: date-time
                     example: 2025-08-19T12:00:00Z
+        '401':
+          description: Invalid or missing API key
         '404':
           description: Transaction not found
+        '500':
+          description: Unexpected server error

@@ -1,6 +1,3 @@
-
-
-
 # Getting Started
 
 This guide will help you start using **JSONPlaceholder**, a free fake REST API for testing and prototyping.
