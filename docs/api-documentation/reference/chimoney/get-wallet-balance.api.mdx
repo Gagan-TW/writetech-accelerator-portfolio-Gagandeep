@@ -1,0 +1,63 @@
+---
+id: get-wallet-balance
+title: "Check wallet balance"
+description: "Returns the current balance of the authenticated wallet."
+sidebar_label: "Check wallet balance"
+hide_title: true
+hide_table_of_contents: true
+api: eJylk01u2zAQha9CzJqR7KBBAe3cJAiMIEBQJ2gLxwuKGltMJJIlR04MQUDv0Bv0aDlJMZLiOm539UYGOW9+Pr5pgdQmQraEL6qqkGAlocCog/FknIUMPiM1wUZBJQrdhICWRK4qZTUKt+6PVUMlWjJaERbiuU+UgATnMShOMy8ggw3SUOPToAYJAaN3NmKErIXTyYQ/76sPin3BgBQMbrEACdpZQkusUd5XXN04mz5GFrYQdYm14n+08wgZuPwRNYEEH7gxMkPZMfVBoG3qHANIwBdV+wohm56eJR/POgkDAL07iI4UjN0cRsP94gK6/ifhw2T691Rzu1WVKYQLojYxGrsRs9u5eMIddBLO/gXi3uKLR82AI4YtBoEhuABco0Yq3YiY51NUQgbp8BBpvsc9CPm1W2hCBRmURD5maaq8SXRpamdxlxiXbqfQrVigm2Bo1ytm3lzjbtZw8uXq8HrBqAeah0F7RKo/BAmGJylRFT1eq2q+/Xoyu52fXF9+62cxdu16qaGe5fnYlbjA2jElkMBDDFSmySSZwLFlb12gtauMEwWLXn/8FFQGRJGraLRAW3hnLEWxdkG8FcgerBCvP36J8xL1kxiNN3pViLfbBdpC3PQd7c+ukMRdUDYqzR2IBSlq4oMFCZXRaGPvrnHcm/kdyCP8zqONrgkaExc26SiKKccyFO8i1coeZBmafH63Hccc2j8r8j9bPD4i4QulvlLGskf7/tvRaksYokHut2kloXSR+K5tcxXxPlRdx8ffGwxsqJWErQpG5fzMy1Un34zBXuNNyGCmNXrOulVVMxjpaM/ZhXv3X10yrd+6IKk1
+sidebar_class_name: "get api-method"
+info_path: docs/api-documentation/reference/chimoney/chimoney-demo-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check wallet balance"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/wallet/balance"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the current balance of the authenticated wallet.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Wallet balance retrieved","content":{"application/json":{"schema":{"type":"object","properties":{"balance":{"type":"number","example":125.75},"currency":{"type":"string","example":"USD"}}}}}},"401":{"description":"Invalid or missing API key"},"500":{"description":"Unexpected server error"}}}
+>
+  
+</StatusCodes>
+
+
+      

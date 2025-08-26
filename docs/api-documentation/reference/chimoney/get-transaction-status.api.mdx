@@ -1,0 +1,71 @@
+---
+id: get-transaction-status
+title: "Get transaction status"
+description: "Retrieves the status and details of a transaction by ID."
+sidebar_label: "Get transaction status"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVV1u2zgQvgoxT92AtmS3AbZ68zZFYRQFgiZB202NBU2OLLYSqZIjI4YgoHfYG/RoPUkxkpyqSRpgsX6xRM43f983oxZI7SJk13AZlItKk/UuwkaCwaiDrfkdMniLFCzuMQoqUERS1EShnBEGSdkyCp8LJeinD7E9iPXZHCT4GoPio7WBDHZIk0gXvSOQUKugKiQMnEsLlmPWigqQ4FSFkIE1ICHgl8YGNJBRaFBC1AVWCrIW6FCzVaRg3Q66u/lPYor1mQhITXBoRB58JU5OLtAZUXmHh5MTkIA3qqpL9kc3/zxXT5dbs8ih23ACsfYuYuSYyzTlv99Hyn3jOG3tHaEjNlZ1XVrd9yP5FBnR3q/Cbz+hJm5L4O6RHeJN2su9vFv0b/OWMBD2OER7fiA0DFCVb4aER4Brqi2GKeA07SToJgR0+vC466uLM3aqAypCs6KHrHMfKkWQgVGEM7IV/uJimS5PZ+mfs8Xzy8UyS9MsTf+Grv9JeJYu7hOxdntVWiN8EJWN0bqdWJ2vxWc8QA959jh3ztPIXyfh9CGmrxze1KgJjYgY9hgEhuADcEYVUuFHvffypgIySCYMxqS1pgMJA3bQfRNKyKAgqmOWJKq2c13YXpdz65P9otdgRN0ES4cesartazysGvZ/vZleX7CqBuFMjW47r/pDkMOwFahMz+84bu9nq/P17PXLD3051uW+h1rq2XgxZiXOsPLcVpDARQyNWczTeQp3R/DcB8p9ab0wDPr+9V9BRUAUWxWtFuhM7a2jKHIfxDFA9tEJ8f3rN/GiQP1ZvFNliST+UqVyGoU43vbz+6bP6PbsFZKYEjrsmo8OJJRWo4vIFY3lvllfgrzTfl+ji74JGuc+7JIRFBO25abUPlKl3MQLh5zuwHhcb790ov25D/7PXh1pJLyhpC6VdSzUvoJ21Nv1dGNwGpk1vNoLH4lv23arIl6Fsuv4+EuDgUW1kbBXwaotU33dgrGRnw1kuSojPlLNk7fjfv5D/LeF+2AtR506FulelQ2/gQSe4P570G06eRQuJzpcrLTGmiaQeyuXp+R2QF+9ZDZ/ADIJZtY=
+sidebar_class_name: "get api-method"
+info_path: docs/api-documentation/reference/chimoney/chimoney-demo-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get transaction status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/transactions/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieves the status and details of a transaction by ID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"in":"path","name":"id","required":true,"schema":{"type":"string"},"description":"Transaction ID returned from **Send money**","example":"tx_9a32bd1f"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Transaction found","content":{"application/json":{"schema":{"type":"object","properties":{"transactionId":{"type":"string","example":"tx_9a32bd1f"},"status":{"type":"string","example":"completed"},"amount":{"type":"number","example":50},"currency":{"type":"string","example":"USD"},"createdAt":{"type":"string","format":"date-time","example":"2025-08-19T12:00:00Z"}}}}}},"401":{"description":"Invalid or missing API key"},"404":{"description":"Transaction not found"},"500":{"description":"Unexpected server error"}}}
+>
+  
+</StatusCodes>
+
+
+      

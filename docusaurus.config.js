@@ -1,6 +1,5 @@
 // @ts-check
 import { themes as prismThemes } from 'prism-react-renderer';
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Gagandeep's Technical Writing Portfolio",
@@ -18,21 +17,23 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
 
   i18n: { defaultLocale: 'en', locales: ['en'] },
+  themes: ['docusaurus-theme-openapi-docs'],
 
   /* ─── 1) classic preset ─── */
   presets: [
     [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+     "classic",
+      {
         docs: {
           path: 'docs',
           routeBasePath: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
+          docItemComponent: "@theme/ApiItem",
         },
-        blog: false,
-        theme: { customCss: require.resolve('./src/css/custom.css') },
-      }),
+    
+        theme: { customCss: "./src/css/custom.css", },
+         
+      } 
     ],
   ],
 

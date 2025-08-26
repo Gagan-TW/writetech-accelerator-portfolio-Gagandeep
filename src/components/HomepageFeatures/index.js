@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        This documentation site is built with Docusaurus, making it quick to set up and simple to maintain. You can focus on writing clear guides and API references without worrying about complex tooling.
+        This portfolio is built using Docusaurus, a static site generator designed for technical documentation. The setup is fast, the structure is developer-friendly, and it works well with Markdown. This allows me to focus on writing clean, structured, and user-friendly documentation for my WriteTech Accelerator projects—without getting stuck in tooling complexity.
       </>
     ),
   },
@@ -17,7 +17,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-       Our site highlights the JSONPlaceholder API through clean, organized examples. Instead of spending time configuring a documentation system, you can dive straight into exploring endpoints, learning usage patterns, and testing requests.
+       Instead of wasting time on configuration, I concentrated on what really matters: writing API docs, developer guides, and project documentation. This site showcases my ability to structure real documentation sets, like Chimoney API docs and Refract framework documentation. Each project emphasizes clarity, usability, and end-user needs—key principles of great technical writing.
       </>
     ),
   },
@@ -26,7 +26,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        The docs showcase real API calls, responses, and usage with tools like curl and JavaScript fetch. Everything is designed to help developers and technical writers quickly understand how to integrate JSONPlaceholder into their testing or learning workflow.
+        Every project here reflects the use of open tools and modern documentation practices. From OpenAPI-generated references to docs-as-code workflow with GitHub and Markdown, this portfolio demonstrates how technical writers can contribute meaningfully to developer teams. Whether it's testing APIs, customizing documentation themes, or writing clear getting-started guides—it's all done with real-world tools.
       </>
     ),
   },

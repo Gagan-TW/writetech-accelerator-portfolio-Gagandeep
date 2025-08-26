@@ -1,4 +1,3 @@
-
 # Chimoney API (Sandbox) – What & Why
 
 Chimoney is a global payouts platform that lets you move money, airtime & other
