@@ -3,32 +3,25 @@ name: Vale Lint & Broken Link Checker
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 
 jobs:
-  vale:
+  lint-and-link-check:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Install Vale
         run: |
-          curl -fsSL https://github.com/errata-ai/vale/releases/latest/download/vale_Linux_64-bit.tar.gz -o vale.tar.gz
-          tar -xvzf vale.tar.gz
+          curl -fsSL https://github.com/errata-ai/vale/releases/download/v2.29.2/vale_2.29.2_Linux_64-bit.tar.gz | tar -xz
           sudo mv vale /usr/local/bin
 
-      - name: Run Vale
-        run: vale docs/**/*.md
+      - name: Run Vale on Markdown files
+        run: vale docs-automation/
 
-  markdown-link-check:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Check Markdown links
+      - name: Check for broken links in Markdown files
         uses: tcort/github-action-markdown-link-check@v1
         with:
-          folder: docs
+          folder-path: docs-automation/
+          file-extension: .md
