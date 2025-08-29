@@ -1,0 +1,34 @@
+name: Vale Lint & Broken Link Checker
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  vale:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Vale
+        run: |
+          curl -fsSL https://github.com/errata-ai/vale/releases/latest/download/vale_Linux_64-bit.tar.gz -o vale.tar.gz
+          tar -xvzf vale.tar.gz
+          sudo mv vale /usr/local/bin
+
+      - name: Run Vale
+        run: vale docs/**/*.md
+
+  markdown-link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check Markdown links
+        uses: tcort/github-action-markdown-link-check@v1
+        with:
+          folder: docs
