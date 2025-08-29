@@ -1,5 +1,2 @@
-This document have some intentional mistake.
+i begun the writing test at 6am. this isn't professional, right?
 
-We begun writing this to test vale linting and make sure it work proper.
-
-Vale is a awesome tool for style check.
